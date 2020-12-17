@@ -38,13 +38,13 @@ handler.handleReqRes = (req, res) => {
 
     const chosenHandler = routes[trimmedPath] ? routes[trimmedPath] : notFoundHandler
     chosenHandler(requestProperties, (statusCode, payload) =>{
-        // const status = typeof(statusCode) === number? statusCode : 500;
-        // const data = typeof(payload) === object ? payload : {}
-        const jsonPayload = JSON.stringify(payload)
+        const status = typeof(statusCode) === 'number'? statusCode : 500;
+        const data = typeof(payload) === 'object' ? payload : {}
+        const jsonPayload = JSON.stringify(data)
 
-        res.statusCode = statusCode;
+        res.statusCode = status;
+        res.setHeader('Content-Type', 'application/json')
         res.end(jsonPayload);
-        console.log(statusCode)
     })
     
     

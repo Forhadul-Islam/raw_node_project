@@ -1,8 +1,10 @@
 // Routs
 const {sampleHandler} = require('./handlers/routeHandlers/sampleHandlers');
+const {userHandler} = require('./handlers/routeHandlers/userHandler');
 
 const routes = {
-    sample : sampleHandler
+    sample : sampleHandler,
+    user: userHandler
 };
 
 
