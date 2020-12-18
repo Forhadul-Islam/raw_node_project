@@ -7,9 +7,9 @@ const app = {};
 
 //create a test file
 //@todo: remove this section later
-// data.update('test', 'newFile', {"name": "Forhadul Islam"}, (err)=>{
-//     console.log(err)
-// })
+data.create('test', 'newFile', {"name": "Forhadul Islam"}, (err)=>{
+    console.log(err)
+})
 
 
 // crete a server
