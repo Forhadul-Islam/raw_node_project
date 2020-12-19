@@ -4,12 +4,14 @@ const environments = {}
 //configs
 environments.development = {
     port: 3001,
-    envName: 'development'
+    envName: 'development',
+    secretKey: 'hhfioshfklshfo'
 }
 
 environments.production = {
     port: 5000,
-    envName: 'production'
+    envName: 'production',
+    secretKey: '8hwhhfshfiosh'
 }
 
 //current environment check
